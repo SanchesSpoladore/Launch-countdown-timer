@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --grayish-blue: hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+  --white: hsl(0, 0%, 100%);
+  --dark-desaturated-blue: hsl(236, 21%, 26%);
+  --very-dark-blue: hsl(235, 16%, 14%);
+  --very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+}
+
+body {
+  font-family: 'Red Hat Text', sans-serif;
+  background: var(--very-dark-blue);
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.container h1 {
+  color: var(--white);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+
+.stars {
+  position: absolute;
+}
+
+.countdown {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.countdown div {
+  margin: 10px;
+}
+
+.countdown p {
+  padding: 20px;
+  background: var(--dark-desaturated-blue);
+  color: var(--soft-red);
+  font-size: 2.875rem;
+  border-radius: 5px;  
+}
+
+.countdown h3 {
+  color: var(--grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.socials {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.socials ul {
+  display: flex;
+}
+
+.socials ul li {
+  margin: 0 20px;
+}
+
+.hills {
+  position: absolute;
+  bottom: 0;
+}
+
+@media (min-width: 1600px) {
+  .stars img,
+  .hills img {
+    width: 1920px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .stars img,
+  .hills img {
+    width: 1600px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: auto;
+    padding: 0 20px;
+  }
+
+  .container h1 {
+    text-align: center;
+  }
+}
